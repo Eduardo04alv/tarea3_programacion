@@ -4,7 +4,7 @@
 <body>
    <h1>Gestor de Tareas</h1>
    <h3>Proyecto CRUD en desarrollo (rama dev)</h3>
-    form method="POST" action="agregar.php" onsubmit="return validarFormulario()">
+    <form method="POST" action="agregar.php" onsubmit="return validarFormulario()">
     <input type="text" id="tarea" name="tarea" placeholder="Escribe una tarea" required>
     <button type="submit">Agregar</button>
 </form>
@@ -23,9 +23,10 @@ function validarFormulario() {
         <?php
         if (file_exists("tareas.txt")) {
             $tareas = file("tareas.txt");
-            foreach ($tareas as $tarea) {
-                echo "<li>" . htmlspecialchars($tarea) . "</li>";
-            }
+           foreach ($tareas as $tarea) {
+    echo "<li>" . htmlspecialchars($tarea) . " <button disabled>Borrar</button></li>";
+}
+
         }
         ?>
     </ul>
