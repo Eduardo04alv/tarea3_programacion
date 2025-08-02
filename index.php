@@ -4,11 +4,13 @@
 <body>
    <h1>Gestor de Tareas</h1>
    <h3>Proyecto CRUD en desarrollo (rama dev)</h3>
-    <form method="POST" action="agregar.php">
-        <input type="text" name="tarea" required>
-        <button type="submit">Agregar</button>
-    </form>
-    <ul>
+   <!-- Inicio de formulario de login (en desarrollo) -->
+<form method="post" action="login.php">
+    <input type="text" name="usuario" placeholder="Usuario">
+    <input type="password" name="clave" placeholder="Contraseña">
+    <button type="submit">Login</button>
+</form>
+<hr>
         <?php
         if (file_exists("tareas.txt")) {
             $tareas = file("tareas.txt");
